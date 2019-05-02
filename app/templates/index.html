@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Hi, {{ current_user.username }}!</h1>
+    {% for post in posts %}
+    <div><p>{{ post.author.username }} says: <b>{{ post.body }}</b></p></div>
+    {% endfor %}
+    <p> Code Review №2. ToDo list:</p>
+    <p>1. Add main functionality (scrapping posts from other sites)</p>
+    <p>2. Optimize image loading (Caching?)</p>
+    <p>3. Add more functions for the profile page</p>
+    <p>4. Other functions (Chat?)</p>
+{% endblock %}
